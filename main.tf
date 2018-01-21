@@ -63,26 +63,23 @@ module "private-c" {
   tags   = "${var.tags}"
 }
 
-#module "nat-a" {
-#  source    = "github.com/btower-labz/terraform-aws-btlabz-nat-base"
-#  subnet-id = "${module.public-a.subnet-id}"
-#  name      = "${var.nat-a-name}"
-#  tags      = "${var.tags}"
-#}
+module "nat-a" {
+  source    = "github.com/btower-labz/terraform-aws-btlabz-nat-base"
+  subnet-id = "${module.public-a.subnet-id}"
+  name      = "${var.nat-a-name}"
+  tags      = "${var.tags}"
+}
 
+module "nat-b" {
+  source    = "github.com/btower-labz/terraform-aws-btlabz-nat-base"
+  subnet-id = "${module.public-b.subnet-id}"
+  name      = "${var.nat-b-name}"
+  tags      = "${var.tags}"
+}
 
-#module "nat-b" {
-#  source    = "github.com/btower-labz/terraform-aws-btlabz-nat-base"
-#  subnet-id = "${module.public-b.subnet-id}"
-#  name      = "${var.nat-b-name}"
-#  tags      = "${var.tags}"
-#}
-
-
-#module "nat-c" {
-#  source    = "github.com/btower-labz/terraform-aws-btlabz-nat-base"
-#  subnet-id = "${module.public-c.subnet-id}"
-#  name      = "${var.nat-c-name}"
-#  tags      = "${var.tags}"
-#}
-
+module "nat-c" {
+  source    = "github.com/btower-labz/terraform-aws-btlabz-nat-base"
+  subnet-id = "${module.public-c.subnet-id}"
+  name      = "${var.nat-c-name}"
+  tags      = "${var.tags}"
+}

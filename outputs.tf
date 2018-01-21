@@ -33,20 +33,17 @@ output "private-c" {
   value       = "${module.private-c.subnet-id}"
 }
 
-#output "nat-a-public-ip" {
-#  description = "NAT-A public IP address."
-#  value = "${module.nat-a.public-ip}"
-#}
+output "nat-a-public-ip" {
+  description = "NAT-A public IP address."
+  value       = "${module.nat-a.public-ip}"
+}
 
+output "nat-b-public-ip" {
+  description = "NAT-B public IP address."
+  value       = "${module.nat-b.public-ip}"
+}
 
-#output "nat-b-public-ip" {
-#  description = "NAT-B public IP address."
-#  value = "${module.nat-b.public-ip}"
-#}
-
-
-#output "nat-c-public-ip" {
-#  description = "NAT-A public IP address."
-#  value = "${module.nat-c.public-ip}"
-#}
-
+output "nat-c-public-ip" {
+  description = "NAT-A public IP address."
+  value       = "${module.nat-c.public-ip}"
+}
