@@ -2,7 +2,7 @@
 ## VPC contruction.
 * High Availability (triple AZ)
 * Public subnets.
-* Private subnetsd.
+* Private subnets.
 * Triple NATs with EIPs
 
 Look here: https://registry.terraform.io/modules/btower-labz/btlabz-vpc-ha-3x/aws
