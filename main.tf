@@ -1,5 +1,5 @@
 module "main_vpc" {
-  source   = "github.com/btower-labz/terraform-aws-btlabz-vpc-base"
+  source   = "btower-labz/btlabz-vpc-base/aws"
   vpc_name = "${var.vpc_name}"
   igw_name = "${var.igw_name}"
   cidr     = "${var.vpc_cidr}"
@@ -7,7 +7,7 @@ module "main_vpc" {
 }
 
 module "public_a" {
-  source = "github.com/btower-labz/terraform-aws-btlabz-pub-sn"
+  source = "btower-labz/btlabz-pub-sn/aws"
   vpc_id = "${module.main_vpc.vpc_id}"
   name   = "${var.public_a_name}"
   az     = "${local.az_a}"
@@ -17,7 +17,7 @@ module "public_a" {
 }
 
 module "public_b" {
-  source = "github.com/btower-labz/terraform-aws-btlabz-pub-sn"
+  source = "btower-labz/btlabz-pub-sn/aws"
   vpc_id = "${module.main_vpc.vpc_id}"
   name   = "${var.public_b_name}"
   az     = "${local.az_b}"
@@ -27,7 +27,7 @@ module "public_b" {
 }
 
 module "public_c" {
-  source = "github.com/btower-labz/terraform-aws-btlabz-pub-sn"
+  source = "btower-labz/btlabz-pub-sn/aws"
   vpc_id = "${module.main_vpc.vpc_id}"
   name   = "${var.public_c_name}"
   az     = "${local.az_c}"
@@ -37,7 +37,7 @@ module "public_c" {
 }
 
 module "private_a" {
-  source = "github.com/btower-labz/terraform-aws-btlabz-pri-sn"
+  source = "btower-labz/btlabz-pri-sn/aws"
   vpc_id = "${module.main_vpc.vpc_id}"
   name   = "${var.private_a_name}"
   az     = "${local.az_a}"
@@ -46,7 +46,7 @@ module "private_a" {
 }
 
 module "private_b" {
-  source = "github.com/btower-labz/terraform-aws-btlabz-pri-sn"
+  source = "btower-labz/btlabz-pri-sn/aws"
   vpc_id = "${module.main_vpc.vpc_id}"
   name   = "${var.private_b_name}"
   az     = "${local.az_b}"
@@ -55,7 +55,7 @@ module "private_b" {
 }
 
 module "private_c" {
-  source = "github.com/btower-labz/terraform-aws-btlabz-pri-sn"
+  source = "btower-labz/btlabz-pri-sn/aws"
   vpc_id = "${module.main_vpc.vpc_id}"
   name   = "${var.private_c_name}"
   az     = "${local.az_c}"
@@ -64,21 +64,21 @@ module "private_c" {
 }
 
 module "nat_a" {
-  source    = "github.com/btower-labz/terraform-aws-btlabz-nat-base"
+  source    = "btower-labz/btlabz-nat-base/aws"
   subnet_id = "${module.public_a.subnet_id}"
   name      = "${var.nat_a_name}"
   tags      = "${var.tags}"
 }
 
 module "nat_b" {
-  source    = "github.com/btower-labz/terraform-aws-btlabz-nat-base"
+  source    = "btower-labz/btlabz-nat-base/aws"
   subnet_id = "${module.public_b.subnet_id}"
   name      = "${var.nat_b_name}"
   tags      = "${var.tags}"
 }
 
 module "nat_c" {
-  source    = "github.com/btower-labz/terraform-aws-btlabz-nat-base"
+  source    = "btower-labz/btlabz-nat-base/aws"
   subnet_id = "${module.public_c.subnet_id}"
   name      = "${var.nat_c_name}"
   tags      = "${var.tags}"
