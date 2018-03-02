@@ -1,17 +1,17 @@
-resource "aws_route" "nat-route-a" {
-  route_table_id         = "${module.private-a.rt-id}"
+resource "aws_route" "nat_route_a" {
+  route_table_id         = "${module.private_a.rt_id}"
   destination_cidr_block = "0.0.0.0/0"
-  nat_gateway_id         = "${module.nat-a.nat-id}"
+  nat_gateway_id         = "${module.nat_a.nat_id}"
 }
 
-resource "aws_route" "nat-route-b" {
-  route_table_id         = "${module.private-b.rt-id}"
+resource "aws_route" "nat_route_b" {
+  route_table_id         = "${module.private_b.rt_id}"
   destination_cidr_block = "0.0.0.0/0"
-  nat_gateway_id         = "${module.nat-b.nat-id}"
+  nat_gateway_id         = "${module.nat_b.nat_id}"
 }
 
-resource "aws_route" "nat-route-c" {
-  route_table_id         = "${module.private-c.rt-id}"
+resource "aws_route" "nat_route_c" {
+  route_table_id         = "${module.private_c.rt_id}"
   destination_cidr_block = "0.0.0.0/0"
-  nat_gateway_id         = "${module.nat-c.nat-id}"
+  nat_gateway_id         = "${module.nat_c.nat_id}"
 }

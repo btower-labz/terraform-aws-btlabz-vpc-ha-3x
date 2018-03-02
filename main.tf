@@ -9,9 +9,9 @@ module "main_vpc" {
 module "public_a" {
   source = "github.com/btower-labz/terraform-aws-btlabz-pub-sn"
   vpc_id = "${module.main_vpc.vpc_id}"
-  name   = "${var.public_a-name}"
+  name   = "${var.public_a_name}"
   az     = "${local.az-a}"
-  cidr   = "${var.public_a-cidr}"
+  cidr   = "${var.public_a_cidr}"
   rt_id  = "${module.main_vpc.rt_id}"
   tags   = "${var.tags}"
 }
@@ -19,9 +19,9 @@ module "public_a" {
 module "public_b" {
   source = "github.com/btower-labz/terraform-aws-btlabz-pub-sn"
   vpc_id = "${module.main_vpc.vpc_id}"
-  name   = "${var.public_b-name}"
+  name   = "${var.public_b_name}"
   az     = "${local.az-b}"
-  cidr   = "${var.public_b-cidr}"
+  cidr   = "${var.public_b_cidr}"
   rt_id  = "${module.main_vpc.rt_id}"
   tags   = "${var.tags}"
 }
