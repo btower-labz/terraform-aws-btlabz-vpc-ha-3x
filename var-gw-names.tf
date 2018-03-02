@@ -1,46 +1,46 @@
-variable "igw-name" {
+variable "igw_name" {
   description = "IGW name. Will be used as the 'Name' tag value."
   type        = "string"
   default     = "main-igw"
 }
 
-variable "nat-a-name" {
+variable "nat_a_name" {
   description = "NAT-A name. Will be used as the 'Name' tag value."
   type        = "string"
   default     = "nat-a"
 }
 
-variable "nat-b-name" {
+variable "nat_b_name" {
   description = "NAT-B name. Will be used as the 'Name' tag value."
   type        = "string"
   default     = "nat-b"
 }
 
-variable "nat-c-name" {
+variable "nat_c_name" {
   description = "NAT-C name. Will be used as the 'Name' tag value."
   type        = "string"
   default     = "nat-c"
 }
 
-variable "rt-public-name" {
+variable "rt_public_name" {
   description = "Main public route table name."
   type        = "string"
   default     = "rt-public"
 }
 
-variable "rt-private-a-name" {
+variable "rt_private_a_name" {
   description = "Route table name for private subnet A."
   type        = "string"
   default     = "rt-private-a"
 }
 
-variable "rt-private-b-name" {
+variable "rt_private_b_name" {
   description = "Route table name for private subnet C."
   type        = "string"
   default     = "rt-private-b"
 }
 
-variable "rt-private-c-name" {
+variable "rt_private_c_name" {
   description = "Route table name for private subnet C."
   type        = "string"
   default     = "rt-private-c"

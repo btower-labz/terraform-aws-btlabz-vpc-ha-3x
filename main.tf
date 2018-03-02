@@ -1,85 +1,85 @@
-module "main-vpc" {
+module "main_vpc" {
   source   = "github.com/btower-labz/terraform-aws-btlabz-vpc-base"
-  vpc-name = "${var.vpc-name}"
-  igw-name = "${var.igw-name}"
-  cidr     = "${var.vpc-cidr}"
-  rt-name  = "${var.rt-public-name}"
+  vpc_name = "${var.vpc_name}"
+  igw_name = "${var.igw_name}"
+  cidr     = "${var.vpc_cidr}"
+  rt_name  = "${var.rt_public_name}"
 }
 
-module "public-a" {
+module "public_a" {
   source = "github.com/btower-labz/terraform-aws-btlabz-pub-sn"
-  vpc-id = "${module.main-vpc.vpc-id}"
-  name   = "${var.public-a-name}"
+  vpc_id = "${module.main_vpc.vpc_id}"
+  name   = "${var.public_a-name}"
   az     = "${local.az-a}"
-  cidr   = "${var.public-a-cidr}"
-  rt-id  = "${module.main-vpc.rt-id}"
+  cidr   = "${var.public_a-cidr}"
+  rt_id  = "${module.main_vpc.rt_id}"
   tags   = "${var.tags}"
 }
 
-module "public-b" {
+module "public_b" {
   source = "github.com/btower-labz/terraform-aws-btlabz-pub-sn"
-  vpc-id = "${module.main-vpc.vpc-id}"
-  name   = "${var.public-b-name}"
+  vpc_id = "${module.main_vpc.vpc_id}"
+  name   = "${var.public_b-name}"
   az     = "${local.az-b}"
-  cidr   = "${var.public-b-cidr}"
-  rt-id  = "${module.main-vpc.rt-id}"
+  cidr   = "${var.public_b-cidr}"
+  rt_id  = "${module.main_vpc.rt_id}"
   tags   = "${var.tags}"
 }
 
-module "public-c" {
+module "public_c" {
   source = "github.com/btower-labz/terraform-aws-btlabz-pub-sn"
-  vpc-id = "${module.main-vpc.vpc-id}"
-  name   = "${var.public-c-name}"
-  az     = "${local.az-c}"
-  cidr   = "${var.public-c-cidr}"
-  rt-id  = "${module.main-vpc.rt-id}"
+  vpc_id = "${module.main_vpc.vpc_id}"
+  name   = "${var.public_c_name}"
+  az     = "${local.az_c}"
+  cidr   = "${var.public_c_cidr}"
+  rt_id  = "${module.main_vpc.rt_id}"
   tags   = "${var.tags}"
 }
 
-module "private-a" {
+module "private_a" {
   source = "github.com/btower-labz/terraform-aws-btlabz-pri-sn"
-  vpc-id = "${module.main-vpc.vpc-id}"
-  name   = "${var.private-a-name}"
-  az     = "${local.az-a}"
-  cidr   = "${var.private-a-cidr}"
+  vpc_id = "${module.main_vpc.vpc_id}"
+  name   = "${var.private_a_name}"
+  az     = "${local.az_a}"
+  cidr   = "${var.private_a_cidr}"
   tags   = "${var.tags}"
 }
 
-module "private-b" {
+module "private_b" {
   source = "github.com/btower-labz/terraform-aws-btlabz-pri-sn"
-  vpc-id = "${module.main-vpc.vpc-id}"
-  name   = "${var.private-b-name}"
-  az     = "${local.az-b}"
-  cidr   = "${var.private-b-cidr}"
+  vpc_id = "${module.main_vpc.vpc_id}"
+  name   = "${var.private_b_name}"
+  az     = "${local.az_b}"
+  cidr   = "${var.private_b_cidr}"
   tags   = "${var.tags}"
 }
 
-module "private-c" {
+module "private_c" {
   source = "github.com/btower-labz/terraform-aws-btlabz-pri-sn"
-  vpc-id = "${module.main-vpc.vpc-id}"
-  name   = "${var.private-c-name}"
-  az     = "${local.az-c}"
-  cidr   = "${var.private-c-cidr}"
+  vpc_id = "${module.main_vpc.vpc_id}"
+  name   = "${var.private_c_name}"
+  az     = "${local.az_c}"
+  cidr   = "${var.private_c_cidr}"
   tags   = "${var.tags}"
 }
 
-module "nat-a" {
+module "nat_a" {
   source    = "github.com/btower-labz/terraform-aws-btlabz-nat-base"
-  subnet-id = "${module.public-a.subnet-id}"
-  name      = "${var.nat-a-name}"
+  subnet-id = "${module.public_a.subnet_id}"
+  name      = "${var.nat_a_name}"
   tags      = "${var.tags}"
 }
 
-module "nat-b" {
+module "nat_b" {
   source    = "github.com/btower-labz/terraform-aws-btlabz-nat-base"
-  subnet-id = "${module.public-b.subnet-id}"
-  name      = "${var.nat-b-name}"
+  subnet-id = "${module.public_b.subnet_id}"
+  name      = "${var.nat_b_name}"
   tags      = "${var.tags}"
 }
 
-module "nat-c" {
+module "nat_c" {
   source    = "github.com/btower-labz/terraform-aws-btlabz-nat-base"
-  subnet-id = "${module.public-c.subnet-id}"
-  name      = "${var.nat-c-name}"
+  subnet-id = "${module.public_c.subnet_id}"
+  name      = "${var.nat_c_name}"
   tags      = "${var.tags}"
 }

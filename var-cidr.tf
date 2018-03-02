@@ -1,40 +1,40 @@
-variable "vpc-cidr" {
+variable "vpc_cidr" {
   description = "VPC CIDR range."
   type        = "string"
   default     = "172.18.0.0/16"
 }
 
-variable "public-a-cidr" {
+variable "public_a_cidr" {
   description = "Public network A CIDR range."
   type        = "string"
   default     = "172.18.1.0/24"
 }
 
-variable "public-b-cidr" {
+variable "public_b_cidr" {
   description = "Public network B CIDR range."
   type        = "string"
   default     = "172.18.2.0/24"
 }
 
-variable "public-c-cidr" {
+variable "public_c_cidr" {
   description = "Public network C CIDR range."
   type        = "string"
   default     = "172.18.3.0/24"
 }
 
-variable "private-a-cidr" {
+variable "private_a_cidr" {
   description = "Private network A CIDR range."
   type        = "string"
   default     = "172.18.11.0/24"
 }
 
-variable "private-b-cidr" {
+variable "private_b_cidr" {
   description = "Private network B CIDR range."
   type        = "string"
   default     = "172.18.12.0/24"
 }
 
-variable "private-c-cidr" {
+variable "private_c_cidr" {
   description = "Private network C CIDR range."
   type        = "string"
   default     = "172.18.13.0/24"

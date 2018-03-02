@@ -1,40 +1,40 @@
-variable "vpc-name" {
+variable "vpc_name" {
   description = "VPC name. Will be used as the 'Name' tag value."
   type        = "string"
   default     = "main-vpc"
 }
 
-variable "public-a-name" {
+variable "public_a_name" {
   description = "Public subnet A name. Will be used as the 'Name' tag value."
   type        = "string"
   default     = "public-a"
 }
 
-variable "public-b-name" {
+variable "public_b_name" {
   description = "Public subnet B name. Will be used as the 'Name' tag value."
   type        = "string"
   default     = "public-b"
 }
 
-variable "public-c-name" {
+variable "public_c_name" {
   description = "Public subnet C name. Will be used as the 'Name' tag value."
   type        = "string"
   default     = "public-c"
 }
 
-variable "private-a-name" {
+variable "private_a_name" {
   description = "Private subnet A name. Will be used as the 'Name' tag value."
   type        = "string"
   default     = "private-a"
 }
 
-variable "private-b-name" {
+variable "private_b_name" {
   description = "Private subnet B name. Will be used as the 'Name' tag value."
   type        = "string"
   default     = "private-b"
 }
 
-variable "private-c-name" {
+variable "private_c_name" {
   description = "Private subnet C name. Will be used as the 'Name' tag value."
   type        = "string"
   default     = "private-c"

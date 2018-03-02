@@ -1,49 +1,49 @@
-output "vpc-id" {
+output "vpc_id" {
   description = "VPC identifier."
-  value       = "${module.main-vpc.vpc-id}"
+  value       = "${module.main_vpc.vpc_id}"
 }
 
-output "public-a" {
+output "public_a" {
   description = "Public subnet A identifier."
-  value       = "${module.public-a.subnet-id}"
+  value       = "${module.public_a.subnet_id}"
 }
 
-output "public-b" {
+output "public_b" {
   description = "Public subnet B identifier."
-  value       = "${module.public-b.subnet-id}"
+  value       = "${module.public_b.subnet_id}"
 }
 
-output "public-c" {
+output "public_c" {
   description = "Public subnet C identifier."
-  value       = "${module.public-c.subnet-id}"
+  value       = "${module.public_c.subnet_id}"
 }
 
-output "private-a" {
+output "private_a" {
   description = "Private subnet A identifier."
-  value       = "${module.private-a.subnet-id}"
+  value       = "${module.private_a.subnet_id}"
 }
 
-output "private-b" {
+output "private_b" {
   description = "Private subnet B identifier."
-  value       = "${module.private-b.subnet-id}"
+  value       = "${module.private_b.subnet_id}"
 }
 
-output "private-c" {
+output "private_c" {
   description = "Private subnet C identifier."
-  value       = "${module.private-c.subnet-id}"
+  value       = "${module.private_c.subnet_id}"
 }
 
-output "nat-a-public-ip" {
+output "nat_a_public_ip" {
   description = "NAT-A public IP address."
-  value       = "${module.nat-a.public-ip}"
+  value       = "${module.nat_a.public_ip}"
 }
 
-output "nat-b-public-ip" {
+output "nat_b_public_ip" {
   description = "NAT-B public IP address."
-  value       = "${module.nat-b.public-ip}"
+  value       = "${module.nat_b.public_ip}"
 }
 
-output "nat-c-public-ip" {
+output "nat_c_public_ip" {
   description = "NAT-A public IP address."
-  value       = "${module.nat-c.public-ip}"
+  value       = "${module.nat_c.public_ip}"
 }
