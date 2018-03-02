@@ -65,21 +65,21 @@ module "private_c" {
 
 module "nat_a" {
   source    = "github.com/btower-labz/terraform-aws-btlabz-nat-base"
-  subnet-id = "${module.public_a.subnet_id}"
+  subnet_id = "${module.public_a.subnet_id}"
   name      = "${var.nat_a_name}"
   tags      = "${var.tags}"
 }
 
 module "nat_b" {
   source    = "github.com/btower-labz/terraform-aws-btlabz-nat-base"
-  subnet-id = "${module.public_b.subnet_id}"
+  subnet_id = "${module.public_b.subnet_id}"
   name      = "${var.nat_b_name}"
   tags      = "${var.tags}"
 }
 
 module "nat_c" {
   source    = "github.com/btower-labz/terraform-aws-btlabz-nat-base"
-  subnet-id = "${module.public_c.subnet_id}"
+  subnet_id = "${module.public_c.subnet_id}"
   name      = "${var.nat_c_name}"
   tags      = "${var.tags}"
 }
