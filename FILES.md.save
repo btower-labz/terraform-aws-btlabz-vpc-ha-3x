@@ -13,6 +13,7 @@
 ├── var-gw-names.tf
 ├── var-names.tf
 ├── var-tags.tf
+├── version.tf
 └── vpc-ha-3x.png
 ```
 
@@ -30,5 +31,6 @@
 | ./var-gw-names.tf | | 
 | ./var-names.tf | | 
 | ./var-tags.tf | | 
+| ./version.tf | | 
 | ./vpc-ha-3x.png | | 
 | ... | ... |
