@@ -72,7 +72,7 @@ module "private_c" {
 
 module "nat_a" {
   source    = "btower-labz/btlabz-nat-base/aws"
-  version   = "1.0.0-000"
+  version   = "1.0.0-001"
   subnet_id = module.public_a.subnet_id
   name      = var.nat_a_name
   tags      = var.tags
@@ -80,7 +80,7 @@ module "nat_a" {
 
 module "nat_b" {
   source    = "btower-labz/btlabz-nat-base/aws"
-  version   = "1.0.0-000"
+  version   = "1.0.0-001"
   subnet_id = module.public_b.subnet_id
   name      = var.nat_b_name
   tags      = var.tags
@@ -88,7 +88,7 @@ module "nat_b" {
 
 module "nat_c" {
   source    = "btower-labz/btlabz-nat-base/aws"
-  version   = "1.0.0-000"
+  version   = "1.0.0-001"
   subnet_id = module.public_c.subnet_id
   name      = var.nat_c_name
   tags      = var.tags
