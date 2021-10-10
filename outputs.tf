@@ -3,6 +3,15 @@ output "vpc_id" {
   value       = module.main_vpc.vpc_id
 }
 
+output "public_subnets" {
+  description = "All the public subnets."
+  value = [
+    module.public_a.subnet_id,
+    module.public_b.subnet_id,
+    module.public_c.subnet_id
+  ]
+}
+
 output "public_a" {
   description = "Public subnet A identifier."
   value       = module.public_a.subnet_id
@@ -16,6 +25,15 @@ output "public_b" {
 output "public_c" {
   description = "Public subnet C identifier."
   value       = module.public_c.subnet_id
+}
+
+output "private_subnets" {
+  description = "All the private subnets."
+  value = [
+    module.private_a.subnet_id,
+    module.private_b.subnet_id,
+    module.private_c.subnet_id
+  ]
 }
 
 output "private_a" {
@@ -47,4 +65,3 @@ output "nat_c_public_ip" {
   description = "NAT-A public IP address."
   value       = module.nat_c.public_ip
 }
-
